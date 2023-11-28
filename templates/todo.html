@@ -24,22 +24,22 @@
 
         <div class="mb-3">
             <label for="NIM" class="form-label">NIM:</label>
-            <input type="text" class="form-control" name="NIM" required>
+            <input type="text" autocomplete="off" class="form-control" name="NIM" required>
         </div>
 
         <div class="mb-3">
             <label for="kegiatan" class="form-label">Task:</label>
-            <input type="text" class="form-control" name="kegiatan" required>
+            <input type="text" autocomplete="off" class="form-control" name="kegiatan" required>
         </div>
 
         <div class="mb-3">
             <label for="tanggal" class="form-label">Pilih Tanggal:</label>
-            <input type="date" class="form-control" name="tanggal" required>
+            <input type="date" autocomplete="off" class="form-control" name="tanggal" required>
         </div>
 
         <div class="mb-3">
             <label for="jam" class="form-label">Pilih Jam:</label>
-            <input type="time" class="form-control" name="jam" required>
+            <input type="time" autocomplete="off" class="form-control" name="jam" required>
         </div>
 
         <button type="submit" class="btn btn-success float-end">Submit</button>
@@ -54,7 +54,7 @@
 <div class="table-responsive container-lg mt-5" style="text-align:center;">
     <div class="row col-6 col-sm-4" style="padding-bottom: 20px;">
         <form action="{{url_for('cari')}}" method="POST" class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="nm">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="nm" autocomplete="off">
         <button class="btn btn-dark btn-sm" type="submit">Search</button>
       </form>
     </div>
