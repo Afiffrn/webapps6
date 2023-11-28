@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+<body>
+ <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-8 col-lg-6">
+            <!-- Section Heading-->
+            <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp; margin-top: 20px; margin-bottom: 20px;">
+              <h1>Kelompok - 6</h1>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Single Advisor-->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+              <!-- Team Thumb-->
+              <div class="advisor_thumb"><img src="{{url_for('static', filename='adit.png')}}" alt="">
+                <!-- Social Info-->
+                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+              </div>
+              <!-- Team Details-->
+              <div class="single_advisor_details_info">
+                <h6>Muhammad Aditya Febriansyah Tanjung</h6>
+                <p class="designation">KETUA</p>
+                <p>NIM : 21.83.0685</p>
+                <p>Kelas: 21S1TK02</p>
+                <p>Prodi: Teknik Komputer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Single Advisor-->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+              <!-- Team Thumb-->
+              <div class="advisor_thumb"><img src="{{url_for('static', filename='krisna.png')}}" alt="">
+                <!-- Social Info-->
+                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+              </div>
+              <!-- Team Details-->
+              <div class="single_advisor_details_info">
+                <h6>Krishna Ananditya Nugraha</h6>
+                <p class="designation">Anggota-1</p>
+                <p>NIM : 21.83.0656</p>
+                <p>Kelas: 21S1TK02</p>
+                <p>Prodi: Teknik Komputer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Single Advisor-->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+              <!-- Team Thumb-->
+              <div class="advisor_thumb"><img src="{{url_for('static', filename='dava.png')}}" alt="">
+                <!-- Social Info-->
+                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+              </div>
+              <!-- Team Details-->
+              <div class="single_advisor_details_info">
+                <h6>Dava Aldi Fadhila</h6>
+                <p class="designation">Anggota-2</p>
+                <p>NIM : 21.83.0692</p>
+                <p>Kelas: 21S1TK02</p>
+                <p>Prodi: Teknik Komputer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Single Advisor-->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+              <!-- Team Thumb-->
+              <div class="advisor_thumb"><img src="{{url_for('static', filename='afif.png')}}" alt="">
+                <!-- Social Info-->
+                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+              </div>
+              <!-- Team Details-->
+              <div class="single_advisor_details_info">
+                <h6>Afif Frizkianto Nugroho</h6>
+                <p class="designation">Anggota-3</p>
+                <p>NIM : 21.83.0652</p>
+                <p>Kelas: 21S1TK02</p>
+                <p>Prodi: Teknik Komputer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<!--
+<body class="bg-light">
+    <div style="padding-top:20px; text-align: center;">
+  <h1 style="color: black;">Kelompok - 6</h1>
+  <br>
+</div>
+
+  <div class="containerp" style="animation: slideLeft 1s ease-in-out;">
+    <div class="profile">
+      <img src="{{url_for('static', filename='adit.png')}}" alt="Foto Profil">
+    </div>
+
+    <div class="description">
+        <h2>Muhammad Aditya Febriansyah Tanjung</h2>
+        <p>NIM : 21.83.0685</p>
+        <p>Kelas: 21S1TK02</p>
+        <p>Prodi: Teknik Komputer</p>
+    </div>
+  </div>
+
+   <div class="containerp" style="animation: slideRight 1s ease-in-out;">
+    <div class="profile1">
+      <img src="{{url_for('static', filename='krisna.png')}}" alt="Foto Profil">
+    </div>
+
+    <div class="description">
+
+        <h2>Krishna Ananditya Nugraha</h2>
+        <p>NIM : 21.83.0656</p>
+        <p>Kelas: 21S1TK02</p>
+        <p>Prodi: Teknik Komputer</p>
+    </div>
+  </div>
+
+   <div class="containerp" style="animation: slideLeft 1s ease-in-out">
+    <div class="profile">
+      <img src="{{url_for('static', filename='dava.png')}}" alt="Foto Profil">
+    </div>
+
+    <div class="description">
+        <h2>Dava Aldi Fadhila</h2>
+        <p>NIM : 21.83.0692</p>
+        <p>Kelas: 21S1TK02</p>
+        <p>Prodi: Teknik Komputer</p>
+    </div>
+  </div>
+
+   <div class="containerp" style="animation: slideRight 1s ease-in-out">
+    <div class="profile1">
+      <img src="{{url_for('static', filename='afif.png')}}" alt="Foto Profil">
+    </div>
+
+    <div class="description">
+        <h2>Afif Frizkianto Nugroho</h2>
+       <p>NIM : 21.83.0652</p>
+                <p>Kelas: 21S1TK02</p>
+                <p>Prodi: Teknik Komputer</p>
+    </div>
+  </div>
+
+
+</body>
+-->
+    {% endblock %}

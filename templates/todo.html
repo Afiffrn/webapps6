@@ -1,0 +1,102 @@
+
+{% extends "base.html" %}
+
+{% block title %}home page{% endblock %}
+{% block content %} 
+<header class="text-center">
+    <div class="containerp container-lg">
+        <h1 class="display-2">Todo-List</h1>
+        <p class="fz lh-sm fw-light">Todo list, atau daftar tugas, adalah alat manajemen waktu yang digunakan untuk mencatat dan mengorganisir pekerjaan yang perlu dilakukan. todo list membantu individu atau tim untuk merinci tugas-tugas yang harus diselesaikan dalam suatu periode waktu. Dengan menyusun daftar ini, seseorang dapat dengan lebih teratur dan efisien mengelola pekerjaan sehari-hari, mengidentifikasi prioritas, dan memastikan bahwa tidak ada tugas yang terlupakan.</p>
+        <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Task Baru</a>
+    </div>
+</header>
+<body class="bg-light">
+
+<div class="modal fade " id="staticBackdrop"data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-light">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Task Baru</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/proses_add/" method="post">
+
+        <div class="mb-3">
+            <label for="NIM" class="form-label">NIM:</label>
+            <input type="text" class="form-control" name="NIM" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="kegiatan" class="form-label">Task:</label>
+            <input type="text" class="form-control" name="kegiatan" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="tanggal" class="form-label">Pilih Tanggal:</label>
+            <input type="date" class="form-control" name="tanggal" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="jam" class="form-label">Pilih Jam:</label>
+            <input type="time" class="form-control" name="jam" required>
+        </div>
+
+        <button type="submit" class="btn btn-success float-end">Submit</button>
+        
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="table-responsive container-lg mt-5" style="text-align:center;">
+    <div class="row col-6 col-sm-4" style="padding-bottom: 20px;">
+        <form action="{{url_for('cari')}}" method="POST" class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="nm">
+        <button class="btn btn-dark btn-sm" type="submit">Search</button>
+      </form>
+    </div>
+     
+     <table class="table  table-hover table-sm table-bordered "  >
+        <thead class="table-dark">
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Task</th>
+                <th>Tanggal</th>
+                <th>Jam</th>
+                <th>Action</th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in hasil_todo or hasil_cari %}
+            <tr>
+                <td>{{ row.1 }}</td>
+                <td>{{ row.2 }}</td>
+                <td>{{ row.3 }}</td>
+                <td>{{ row.4 }}</td>
+                <td>{{ row.5 }}</td>
+               
+                <td>
+                    <div class="btn-group" role="group">
+                       <form action="/complete/{{ row.0 }}" method="POST">
+                        <button type="submit" class="btn btn-success btn-sm">Selesai</button>
+                    </form>
+                     <form action="/delete/{{ row.0 }}" method="GET">
+                        <button type="submit" class="btn btn-danger btn-sm" style="margin-left: 10px;">Hapus</button>
+                    </form> 
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+   
+  
