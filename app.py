@@ -10,8 +10,8 @@ app = Flask(__name__)
 #open connection
 try:
     db = pymysql.connect(
-        host    ='web6.mysql.database.azure.com',
-        user    ='admin6',
+        host    ='k6cserver1.mysql.database.azure.com',
+        user    ='k6cadmin',
         passwd  ='kelompok_6',
         database='db_todo',
         ssl = {'ca' :os.getenv("SSL")}
